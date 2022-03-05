@@ -35,14 +35,14 @@ export async function handler(event, context) {
             return {
                 statusCode: 303,
                 headers: {
-                    "Location": `/error?msg=${encodeURIComponent("You cannot submit ban appeals with this Discord account.")}`,
+                    "Location": `/error?msg=${encodeURIComponent("Você não pode enviar pedidos de banimento com esta conta do Discord.")}`,
                 },
             };
         }
         
         const message = {
             embed: {
-                title: "New appeal submitted!",
+                title: "Novo pedido de unban!",
                 timestamp: new Date().toISOString(),
                 fields: [
                     {
